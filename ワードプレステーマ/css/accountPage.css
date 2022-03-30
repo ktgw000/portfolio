@@ -1,0 +1,22 @@
+#accountPage h1{
+  background: #EEE;
+  font-size: 20px;
+  padding: 20px;
+}
+#accountPage #accountInfomationEditContent{
+  display: none;
+}
+#accountPage #accountInfomationEdit{
+  cursor: pointer;
+}
+#accountPage #accountInfomationEdit:hover{
+  color: #5d90fc;
+}
+#accountPage #accountInfomationEdit::after{
+  content: "\f160";
+  font-family: FontAwesome;
+  margin: 10px;
+}
+#accountPage #accountInfomationEditContent.display{
+  display: block;
+}

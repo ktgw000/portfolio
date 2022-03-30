@@ -1,0 +1,52 @@
+#content.review{
+  display: flex;
+}
+#content.review h1{
+  font-size: 23px;
+}
+#content.review h2{
+  font-size: 20px;
+  margin: 30px 0 20px;
+}
+#content.review .glsr-default .glsr-review{
+  border-bottom: solid 1px #EEE;
+  padding-bottom: 30px;
+  margin: 20px 0 0 0 !important;
+}
+#content.review .glsr-default .glsr-review:last-child{
+  border-bottom: none;
+}
+#content.review .glsr-default .glsr-review>.glsr-review-date{
+  font-style: normal !important;
+}
+#content.review .glsr-summary-text .glsr-tag-value{
+  color: #111;
+}
+@media screen and (max-width:767px) {
+  #content.review{
+    flex-wrap: wrap;
+  }
+  .reviewLeft{
+    width: 100%;
+  }
+  .reviewRight{
+    width: 100%;
+  }
+  .glsr-default .glsr-summary-percentages{
+    display: none;
+  }
+  #content.review #reviewAdd{
+    text-align: left;
+  }
+}
+@media screen and (min-width:768px) {
+  #content.review{
+    gap: 30px;
+  }
+  .reviewLeft{
+    width: 30%;
+  }
+  .reviewRight{
+    width: 70%;
+  }
+}

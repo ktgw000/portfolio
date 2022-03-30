@@ -1,0 +1,78 @@
+#searchLists h2::after{
+  content: "\f103";
+  font-family: FontAwesome;
+  margin: 10px;
+  color: rgb(61, 167, 52);
+}
+@media screen and (max-width: 767px){
+  #searchLists{
+    order: 2;
+    width: 100%;
+    margin: 15px 0;
+    border-top: solid 1px #EEE;
+  }
+  #searchLists h2{
+    font-size: 16px;
+    margin: 25px 15px 20px 0;
+  }
+  #searchLists ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%
+  }
+  #searchLists .searchList ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    border: solid 1px #EEE;
+    width: calc(50% - 5px);
+    box-sizing: border-box;
+    height: 50px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px){
+  #content.home #searchLists{
+    margin-top: -20px;
+  }
+  #searchLists{
+    width: 250px;
+    border-right: solid 1px #EEE;
+    box-sizing: border-box;
+  }
+  #searchLists:nth-child(1){
+    margin-top: 15px;
+  }
+  #searchLists h2{
+    font-size: 16px;
+    margin: 25px 15px 20px 15px;
+  }
+  #searchLists ul{
+    list-style: none;
+    flex-direction: column;
+    font-size: 15px;
+    padding: 0 0 15px 15px;
+    border-bottom: solid 1px #EEE;
+  }
+  #searchLists ul li{
+    padding-bottom: 10px;
+    font-size: 14px;
+  }
+  #searchLists ul li:before{
+    content: '\f105';
+    font-family: "Font Awesome 5 free";
+    color: rgba(0,0,0,0.5);
+    font-weight: 900;
+    margin: auto;
+    padding-right: 7px;
+    font-size: 15px;
+  }
+  #searchLists ul li:hover::before{
+    color: orange;
+  }
+  #searchLists ul li:hover{
+    font-weight: bold;
+  }
+}
