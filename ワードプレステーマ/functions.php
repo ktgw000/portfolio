@@ -60,9 +60,6 @@ function welcart_tag_cloud_args( $args ){
 	return $args;
 }
 
-/***********************************************************
-* excerpt
-***********************************************************/
 if ( ! function_exists( 'welcart_assistance_excerpt_length' ) ) {
 	function welcart_assistance_excerpt_length( $length ) {
 		return 10;
@@ -112,9 +109,6 @@ if ( ! function_exists( 'welcart_custom_excerpt_more' ) ) {
 }
 //add_filter( 'get_the_excerpt', 'welcart_custom_excerpt_more' );
 
-/***********************************************************
-* SSL
-***********************************************************/
 if( $usces->options['use_ssl'] ){
 	add_action('init', 'usces_ob_start');
 	function usces_ob_start(){
@@ -139,9 +133,7 @@ if( $usces->options['use_ssl'] ){
 	}
 }
 
-?>
-
-<?php // パンくずリスト https://cotodama.co/wordpress_breadcrumb/
+// パンくずリスト https://cotodama.co/wordpress_breadcrumb/
 function breadcrumb() {
     $home = '<li><a href="'.get_bloginfo('url').'" >HOME</a></li>';
   
@@ -215,9 +207,6 @@ add_filter( 'get_the_archive_title', function ($title) {
     return $title;
 });
 
-
-
-
 // 関数にウィジェットの情報を配列で入力
 function headerWidget(){
     register_sidebar(array(
@@ -241,10 +230,7 @@ function headerWidget(){
   // 関数に入ったウィジェットの情報を登録
   add_action("widgets_init","headerWidget");
   add_action("widgets_init","footerWidget");
-?>
 
-
-<?php
 function my_usces_get_customer_button( $out = '' ) {
 	global $usces, $member_regmode;
 	$res = '';
@@ -269,8 +255,6 @@ function my_usces_get_customer_button( $out = '' ) {
 		echo $res;
 	}
 }
-?>
-<?php
 
 //郵便番号
 function my_example_zipcode() {
@@ -308,9 +292,7 @@ function my_example_fax() {
 }
 add_filter('usces_filter_after_fax', 'my_example_fax');
 
-?>
-
-<?php //数量をプルダウン化
+//数量をプルダウン化
 add_filter('usces_filter_the_itemQuant',  'my_filter_the_itemQuant', 10, 2);
 function my_filter_the_itemQuant($html, $post) {
 	$zaiko = usces_the_itemZaikoNum( 'return' );
@@ -323,16 +305,8 @@ function my_filter_the_itemQuant($html, $post) {
   return $html;
 }
 ?>
-
-
-
-<?php 
-/*****************************************************************************
-https://nw.myds.me/wecart/welcart-itemgpexp-msg/
-業務パック内容の表示プログラム
-引数
-$title：表示するタイトル デフォルトは数量割引
-*******************************************************************************/
+<?php
+// https://nw.myds.me/wecart/welcart-itemgpexp-msg/
 function my_itemGpExp_msg() {
 	$title = '';
 	global $post, $usces;
@@ -392,6 +366,7 @@ function my_itemGpExp_msg() {
 	$msg3_3 = ' /'.$unit;
 	$msg3_4 = $GpD3.'%OFF!!';
 ?>
+
 <div class='gp_box'>
 	<div class='gp_msg'>
 			<div class="sp_msg1">
@@ -418,15 +393,12 @@ function my_itemGpExp_msg() {
 		<?php endif;?>
 	</div>
 </div>
+
 <?php
 }
-/* 個別商品関連関数の追加 */
+// 個別商品関連関数の追加 
 	get_template_part('func/welcart/item/my_itemGpExp_msg');		/* 業務パックマーク＆メッセージ変更 */
-?>
 
-
-
-<?php 
 function my_paginate_links( $args = '' ) {
 	global $wp_query, $wp_rewrite;
 
@@ -726,7 +698,6 @@ function _my_navigation_markup( $links, $class = 'posts-navigation', $screen_rea
 	return sprintf( $template, sanitize_html_class( $class ), esc_html( $screen_reader_text ), $links );
 }
 
-
 // お気に入り
 function okini_usces_the_itemSkuButton($value, $out = '') {
 	global $usces, $post;
@@ -764,7 +735,5 @@ function okiniNumber(){
 		echo "0"; 
 	}
 }
-
-
 
 ?>
