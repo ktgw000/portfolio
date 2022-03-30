@@ -30,7 +30,7 @@ async function fetchJSON(requestURL, getQuery = {}, postQuery = {}, $isFileMode 
 window.onload = () => {
 	const okinibtns = document.getElementsByClassName('okinibutton');
 	for(const okinibtn of okinibtns) {
-		fetchJSON('/wordpress/wp-content/themes/sample/test.php', {
+		fetchJSON('/wordpress/<?php echo get_template_directory_uri(); ?>/test.php', {
 			okini_post_id: okinibtn.dataset.id,
 			okini_sku: okinibtn.dataset.sku
 		}).then(r => {

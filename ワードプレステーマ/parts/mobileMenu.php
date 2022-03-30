@@ -35,4 +35,4 @@
 	</div>
 </div>
 
-<script type="text/javascript" src="/wordpress/wp-content/themes/sample/js/mobileMenu.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/mobileMenu.js"></script>

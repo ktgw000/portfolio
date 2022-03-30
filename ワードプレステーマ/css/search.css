@@ -29,7 +29,6 @@
   margin: 15px 0;
   font-weight: bold;
 }
-
 #content.search #productList .productItem:hover{
   border-bottom: solid 1px orange;
 }
@@ -47,9 +46,6 @@
   font-weight: normal;
   text-align: center;
 }
-
-
-
 @media screen and (max-width: 767px){
   #content.search #productList{
     display: flex;
@@ -74,7 +70,6 @@
     box-sizing: border-box;
   }
 }
-
 #content.search #productSort{
   width: 100px;
   height: 40px;
@@ -106,9 +101,6 @@
     border-bottom: solid 1px #3abd3a;
   }
 }
-
-
-
 /* プラグイン */
 .glsr-default .glsr-summary{
   justify-content: center;

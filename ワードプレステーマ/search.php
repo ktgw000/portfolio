@@ -114,12 +114,13 @@
             </div>
         </div>
     </div>	
-
     <?php else: ?>
     <p>商品が見つかりませんでした。</p>
     <p>別のキーワードをお試しください。</p>
     <?php endif; ?>
 </div>
+
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/search.js"></script>
+
 <?php get_footer(); ?>
 

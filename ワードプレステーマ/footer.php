@@ -39,48 +39,40 @@
 <?php wp_footer(); ?>
 
 <script type="text/javascript">
-
-
+// ヘッダー
 const headerNavMenu = document.getElementById("headerNavMenu");
 const headerNavMenuLine = headerNavMenu.getElementsByClassName("line");
 const headerNavMenuContent = document.getElementById("headerNavMenuContent");
-
 headerNavMenu.addEventListener("click",() => {
   headerNavMenuContent.classList.toggle("display");
   for(let i = 0; i < headerNavMenuLine.length; i++){
     headerNavMenuLine[i].classList.toggle("animation");
   }
 })
-
-  // お気に入り
-  const backgroundCover = document.getElementById("backgroundCover");
-
-  const PcNavFavorite = document.getElementById("PcNavFavorite");
-  const PcNavFavoriteHover = document.getElementById("PcNavFavoriteHover");
-
-  PcNavFavorite.addEventListener("mouseover",() => {
-    PcNavFavoriteHover.classList.add("display");
-    backgroundCover.style.opacity = "1";
-  })
-  PcNavFavorite.addEventListener("mouseout",() => {
-    PcNavFavoriteHover.classList.remove("display");
-    backgroundCover.style.opacity = "0";
-  })
-
-  // かーと
-  const PcNavCart = document.getElementById("PcNavCart");
-  const PcNavCartHover = document.getElementById("PcNavCartHover");
-
-  PcNavCart.addEventListener("mouseover",() => {
-    PcNavCartHover.classList.add("display");
-    backgroundCover.style.opacity = "1";
-  })
-  PcNavCart.addEventListener("mouseout",() => {
-    PcNavCartHover.classList.remove("display");
-    backgroundCover.style.opacity = "0";
-  })
-
-  
+// お気に入り
+const backgroundCover = document.getElementById("backgroundCover");
+const PcNavFavorite = document.getElementById("PcNavFavorite");
+const PcNavFavoriteHover = document.getElementById("PcNavFavoriteHover");
+PcNavFavorite.addEventListener("mouseover",() => {
+  PcNavFavoriteHover.classList.add("display");
+  backgroundCover.style.opacity = "1";
+})
+PcNavFavorite.addEventListener("mouseout",() => {
+  PcNavFavoriteHover.classList.remove("display");
+  backgroundCover.style.opacity = "0";
+})
+// カート
+const PcNavCart = document.getElementById("PcNavCart");
+const PcNavCartHover = document.getElementById("PcNavCartHover");
+PcNavCart.addEventListener("mouseover",() => {
+  PcNavCartHover.classList.add("display");
+  backgroundCover.style.opacity = "1";
+})
+PcNavCart.addEventListener("mouseout",() => {
+  PcNavCartHover.classList.remove("display");
+  backgroundCover.style.opacity = "0";
+})
 </script>
+
 </body>
 </html>

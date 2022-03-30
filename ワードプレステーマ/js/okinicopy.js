@@ -27,7 +27,7 @@ async function fetchJSON(requestURL, getQuery = {}, postQuery = {}, $isFileMode 
 }
 
  window.onload = () => {
-  fetchJSON('/wordpress/wp-content/themes/sample/test.php', {
+  fetchJSON('/wordpress/<?php echo get_template_directory_uri(); ?>/test.php', {
     okini_all: 1
   }).then(r => {
     for(let i = 0; i < r.result.length; i++){
@@ -40,7 +40,7 @@ async function fetchJSON(requestURL, getQuery = {}, postQuery = {}, $isFileMode 
 
 
 let xhr = new XMLHttpRequest();
-xhr.open("POST", "/wordpress/wp-content/themes/sample/favoriteList.php");
+xhr.open("POST", "/wordpress/<?php echo get_template_directory_uri(); ?>/favoriteList.php");
 xhr.responseType = "json"; 
 xhr.addEventListener("load", () => {
   console.log(xhr.response);

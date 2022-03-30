@@ -741,7 +741,7 @@ function okini_usces_the_itemSkuButton($value, $out = '') {
 	
 		$type = 'button';
 		$html = "";
-		$html .= "<input name=\"okini[{$post_id}][{$sku}]\" type=\"{$type}\" id=\"okini[{$post_id}][{$sku}]\" class=\"skubutton okinibutton\" data-id=\"$post_id\" data-sku=\"$sku\" value=\"{$value}\" onclick=\"const e=this;fetchJSON('/wordpress/wp-content/themes/sample/test.php',{},{okini_post_id:$post_id,okini_sku:'$sku'}).then(r=>{console.log(r);e.classList.toggle('okinied');});\" />";
+		$html .= "<input name=\"okini[{$post_id}][{$sku}]\" type=\"{$type}\" id=\"okini[{$post_id}][{$sku}]\" class=\"skubutton okinibutton\" data-id=\"$post_id\" data-sku=\"$sku\" value=\"{$value}\" onclick=\"const e=this;fetchJSON('/wordpress/<?php echo get_template_directory_uri(); ?>/test.php',{},{okini_post_id:$post_id,okini_sku:'$sku'}).then(r=>{console.log(r);e.classList.toggle('okinied');});\" />";
 
 	$html .= "<input name=\"usces_referer\" type=\"hidden\" value=\"" . esc_url($_SERVER['REQUEST_URI']) . "\" />\n";
 	$html = apply_filters( 'usces_filter_item_sku_button', $html, $value, $type );

@@ -16,6 +16,6 @@ var_dump($_SESSION);
 </div>
 
 
-<script type="text/javascript" src="/wordpress/wp-content/themes/sample/js/okinicopy.js"></script>
+<script type="text/javascript" src="/wordpress/<?php echo get_template_directory_uri(); ?>/js/okinicopy.js"></script>
 
 <?php get_footer(); ?>

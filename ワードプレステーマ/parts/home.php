@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="wp-content/themes/sample/css/home.css">
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/home.css">
 
 <div id="content" class="home">
 
@@ -111,4 +111,4 @@ $categoryIdLine3 = [1,2]; // 3列目に表示するカテゴリIDを指定
 	</div>
 </div>
 
-<script type="text/javascript" src="wp-content/themes/sample/js/home.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/home.js"></script>

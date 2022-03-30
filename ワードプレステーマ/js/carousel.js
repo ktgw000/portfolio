@@ -1,5 +1,3 @@
-// 要素のスタイルを取得する getComputedStyle(element).プロパティ名;
-
 const carousel = document.getElementById("carousel");
 const carouselItem = document.getElementsByClassName("carouselItem")[0];
 const carouselItemContent = carouselItem.getElementsByTagName("a")[0];
@@ -10,11 +8,9 @@ const carouselAutoPlayInterval = 3000; // カルーセル自動再生の間隔 /
 const carouselAnimationSecond = 700; // アニメーションの時間を指定 / MS
 const carouselEventInterval = 700 // イベントが再発火可能になる間隔 / MS
 let carouselItemImageWidth = getComputedStyle(carouselItemContent).minWidth; // スライドする横幅を指定
-
 CarouselAutoPlay(); // カルーセル自動再生
 CarouselNext(); // Nextのイベント処理
 CarouselPrev(); // Prevのイベント処理
-
 function CarouselAutoPlay(){
   const carouselAutoPlaySet = setInterval(() => {
     carouselItemImageWidth = getComputedStyle(carouselItemContent).minWidth;
@@ -33,7 +29,6 @@ function CarouselAutoPlay(){
     CarouselAutoPlay();
   },{once:true});
 }
-
 function CarouselNext(){
   carouselNext.addEventListener("click",() => {
     carouselItemImageWidth = getComputedStyle(carouselItemContent).minWidth;
@@ -48,7 +43,6 @@ function CarouselNext(){
     },carouselEventInterval)
   },{once:true})
 }
-
 function CarouselPrev(){
   carouselPrev.addEventListener("click",() => {
     carouselItemImageWidth = getComputedStyle(carouselItemContent).minWidth;

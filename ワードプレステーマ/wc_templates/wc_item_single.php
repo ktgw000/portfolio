@@ -297,8 +297,8 @@ $_SESSION["post_title"] = $post->post_title; //レビューページで使用
 
 
 
-<script type="text/javascript" src="/wordpress/wp-content/themes/sample/js/okini.js"></script>
-<script type="text/javascript" src="/wordpress/wp-content/themes/sample/js/reviews.js"></script>
-<script type="text/javascript" src="/wordpress/wp-content/themes/sample/js/productPage.js"></script>
+<script type="text/javascript" src="/wordpress/<?php echo get_template_directory_uri(); ?>/js/okini.js"></script>
+<script type="text/javascript" src="/wordpress/<?php echo get_template_directory_uri(); ?>/js/siteReviews.js"></script>
+<script type="text/javascript" src="/wordpress/<?php echo get_template_directory_uri(); ?>/js/productPage.js"></script>
 <?php get_footer(); ?>
 

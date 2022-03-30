@@ -9,10 +9,6 @@
   border-left: 1px solid #eee;
   border-right: 1px solid #eee;
 }
-h2#kanren{
-  font-size: 18px;
-  margin: 25px 10px;
-}
 #carousel .carouselItem{
   text-align: center;
   display: flex;
@@ -25,7 +21,6 @@ h2#kanren{
   border-left: solid 1px #EEE;
   box-sizing: border-box;
 }
-
 @media screen and (max-width:319px){ 
   #carousel .carouselItem a{
     min-width: calc(50%);
@@ -85,7 +80,6 @@ h2#kanren{
 #carousel .carouselItem a .carouselTitleAndPrise{
   font-size: 14px;
 }
-
 #carousel .carouselItem a .carouselPrise span:nth-child(1){
   font-size: 13px;
   padding-right: 3px;
@@ -165,7 +159,6 @@ h2#kanren{
   justify-content: center;
   padding-left: 3px;
 }
-
 #carousel .carouselItem.slidePrev{
   animation-name: slidePrev;
 	animation-duration: 2s;

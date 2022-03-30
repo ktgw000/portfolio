@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="/wordpress/wp-content/themes/sample/css/carousel.css">
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/carousel.css">
 <?php 
 global $post;
 $postkeep = $post;
@@ -25,4 +25,4 @@ $posts_array = get_posts($posts);
   </div>
 </div> 
 
-<script type="text/javascript" src="/wordpress/wp-content/themes/sample/js/carousel.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/carousel.js"></script>

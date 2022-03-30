@@ -6,12 +6,9 @@
 	<meta name="description" content="ディスクリプション">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
-
 	<script src="https://kit.fontawesome.com/e8d28d07a2.js" crossorigin="anonymous"></script>
 	<?php wp_head(); ?>
 </head>
-
-
 
 <header>
 	<nav id="headerNav">
